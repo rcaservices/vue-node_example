@@ -27,7 +27,7 @@ const users = [
 ];
 
 app.use(bodyParser.json());
-app.use(express.static(process.cwd() + '/my-app/dist'));
+app.use(express.static(process.cwd() + '../../my-app/dist'));
 
 app.get('/api/users', (req, res) => {
   console.log('api/users called!!!!!!!')
@@ -43,7 +43,7 @@ app.post('/api/user', (req, res) => {
 });
 
 app.get('/', (req,res) => {
-  res.sendFile(process.cwd() + '/my-app/dist/index.html');
+  res.sendFile(process.cwd() + '../../my-app/dist/index.html');
 });
 
 app.listen(port, () => {
